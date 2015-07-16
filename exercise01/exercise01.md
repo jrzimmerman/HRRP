@@ -2,21 +2,23 @@
  *From Mumbai, India*
 
  ************************
-###Bio:
-* Went to business school and pursued a degree in finance
+### Bio:
+* Went to business school and pursued a degree in **finance**
 * Thought who would pay me to code HTML?
  ************************
 
 ### Programming Experience
-* learnt Basic + COBOL 20 years ago
+* Learned Basic + COBOL 20 years ago
 * Knows some HTML and CSS
-* learned via codecademy and edx
- ************************
+* Learned via codecademy and edx
+
+************************
 
 ### Goals:
-* wants to do start and reverse decision made earlier
+* Wants to do start and reverse decision made earlier
 * Learn basics and get in to Hack Reactor
- ************************
+
+************************
 
 ### Hobbies:
 * Loves to read kindle
@@ -35,6 +37,7 @@
  ***********************
 
  ![Insert Random Kitten Here](http://placekitten.com/g/200/300)
+ ![local photo](assets/profile.png)
 
 # This is a header
 ## This is an even smaller header

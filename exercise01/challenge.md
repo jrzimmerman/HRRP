@@ -1,12 +1,12 @@
 # Race Advisor
 
-* Are you trying to decide your next race?
+* Trying to find your next race?
 
-* Do you want to give feedback on the race you just finished?
+* Want to give feedback on the race you just finished?
 
-* Want to know the best spot to park on race day?
+* Searching for the best spot to park on race day?
 
-* No more showing up to races with no idea how your experience will be.
+* Say goodbye to showing up to races without knowing how your experience will be.
 
 ## Welcome to Race Advisor!
 
@@ -38,6 +38,6 @@ Are you headed to DC next weekend? Find a race here!
 
 *Brianne - 5k Racer*
 
-**"I love supporting my husband, Race Advisor lets me know the best spectating spots on the course!"**
+**"Race Advisor lets me know the best spectating spots on the course!"**
 
 *Kirsten - Spectator*
