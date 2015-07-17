@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+  <form action="form-responses/new" method="POST">
+    <input type="text" name="firstname" value ="default" size="100" autofocus>
+    <br>
+    <input type="password" name="pswd">
+    <br>
+    <input type="email" name="userEmail" value="hello@site.com">
+    <br>
+    <input type="radio" name="weird" value="code-blue" checked><span>pick this!</span>
+    <input type="radio" name="weird" value="code-red" checked><span>or pick this</span>
+    <br>
+    <input type="checkbox" name="optin" value="trusting" checked>You agree to everything
+    <input type="checkbox" name="optout" value="skeptical" disabled>Wait, what?
+    <br>
+  <select name="car">
+    <optgroup label="Swedish Cars">
+      <option value="boring">Volvo</option>
+      <option value="cool">Honda</option>
+    </optgroup>
+  </select>
+  <br>
+  <textarea name="user_message" rows="8" cols="40"></textarea>
+  <br>
+  <input type="submit">
+  </form>
+</body>
+</html>
