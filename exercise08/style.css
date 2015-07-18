@@ -1,0 +1,42 @@
+#container {
+  max-width: 960px;
+  margin: 0 auto;
+  background-color: gray;
+  margin-top: 140px;
+  overflow: auto;
+}
+#header {
+  background-color: orange;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 100%;
+}
+#brand {
+  background-color: cyan;
+}
+#nav {
+  background-color: green;
+}
+#nav li {
+  display: inline;
+  list-style-type: none;
+}
+#content {
+  background-color: blue;
+  width: 75%;
+  float:left;
+}
+#content img {
+  float: right;
+  margin: 0 0 1em 1em;
+}
+#sidebar {
+  background-color: aqua;
+  width: 25%;
+  float:left;
+}
+* {
+  box-sizing: border-box;
+}

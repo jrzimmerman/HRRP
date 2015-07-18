@@ -1,0 +1,29 @@
+#container {
+  width: 960px;
+  margin: auto;
+}
+#header {
+  width: 100%;
+}
+#footer {
+  width: 100%;
+}
+.row {
+  margin: 0 0 0 0;
+}
+.col-3 {
+  background-color: violet;
+  margin: 0 0 0 0;
+}
+.col-4{
+  background-color: blue;
+  margin: 0 0 0 0;
+}
+.col-5 {
+  background-color: tan;
+  margin: 0 0 0 0;
+}
+.col-8 {
+  background-color: green;
+  margin: 0 0 0 0;
+}
