@@ -9,21 +9,22 @@
   width: 100%;
 }
 .row {
-
-}
-.col-3 {
-  background-color: violet;
   margin: 0 0 0 0;
+  display: inline;
 }
-.col-4{
+.col-4 {
   background-color: blue;
   margin: 0 0 0 0;
 }
-.col-5 {
-  background-color: tan;
+.col-4.little {
+  background-color: orange;
   margin: 0 0 0 0;
 }
 .col-8 {
   background-color: green;
+  margin: 0 0 0 0;
+}
+.col-8.little {
+  background-color: violet;
   margin: 0 0 0 0;
 }
