@@ -3,35 +3,43 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 </head>
-    <body>
-      <nav class="navbar navbar-default">
-        <ul class="nav navbar-nav">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="media.html">Media</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li class="active"><a href="signup.html">Sign up</a></li>
-        </ul>
-      </nav>
-      <div class="container">
-        <form action="http://formspree.io/justin.richard.zimmerman@gmail.com" method="POST">
-          <label for="firstname"> Enter Full Name: </label>
-          <input type="text" name="firstname" value ="default" size="100" autofocus>
-          <br>
-          <label for="username"> Enter User Name: </label>
-          <input type="text" name="username" value ="default" size="100" autofocus>
-          <br>
-          <label for="pswd"> Enter Password: </label>
-          <input type="password" name="pswd">
-          <br>
-          <label for="userEmail"> Enter Email Address: </label>
-          <input type="email" name="userEmail" value="hello@site.com">
-          <br>
-          <label> Please introduce yourself: <br>
-            <textarea name="user_message" rows="8" cols="40"></textarea></label>
-          <br>
-          <input type="submit">
-        </form>
-      </div>
-      </body>
-      </html>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li class="active"><a href="signup.html">Sign up</a></li>
+      </ul>
+    </nav>
+    <form action="http://formspree.io/justin.richard.zimmerman@gmail.com" method="POST">
+      <label for="firstname"> Enter Full Name: </label>
+      <input type="text" name="firstname" value="default" size="100" autofocus>
+      <br>
+      <label for="username"> Enter User Name: </label>
+      <input type="text" name="username" value="default" size="100" autofocus>
+      <br>
+      <label for="pswd"> Enter Password: </label>
+      <input type="password" name="pswd">
+      <br>
+      <label for="userEmail"> Enter Email Address: </label>
+      <input type="email" name="userEmail" value="hello@site.com">
+      <br>
+      <label> Please introduce yourself:
+        <br>
+        <textarea name="user_message" rows="8" cols="40"></textarea>
+      </label>
+      <br>
+      <input type="submit">
+    </form>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+
+</html>
