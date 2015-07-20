@@ -11,50 +11,85 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <style>
+  <style>
     .container {
       background-color: gray;
     }
+
     h1 {
       font-size: 30px;
       color: blue;
     }
+
     p {
       font-family: verdana;
     }
+
     #lead-video {
       padding-bottom: 20px;
+      border: 4px;
+      border-color: red;
     }
+
+    #media-title {
+      font-size: 40px;
+    }
+    
+    #second-video {
+      border: 2px;
+      border-color: green;
+    }
+
+    #lead-title {
+      color: orange;
+    }
+
+    #second-title {
+      color: yellow;
+    }
+
     .video-container {
+      background-color: lightgray;
     }
+
     .caption {
+      font-size: 20px;
+      color: blue;
     }
-    </style>
-  </head>
-      <body>
-        <div class="container">
-          <nav class="navbar navbar-default">
-            <ul class="nav navbar-nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li class="active"><a href="media.html">Media</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="signup.html">Sign up</a></li>
-            </ul>
-          </nav>
+  </style>
+</head>
 
-        <h1> Race Advisor Media </h1>
+<body>
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li class="active"><a href="media.html">Media</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="signup.html">Sign up</a></li>
+      </ul>
+    </nav>
 
-        <p><iframe id="#lead-video" width="560" height="315" src="https://www.youtube.com/embed/PY4ExLQyF4w" frameborder="0" allowfullscreen></iframe></p>
-        <p><iframe width="560" height="315" src="https://www.youtube.com/embed/S1jx9SNK44E" frameborder="0" allowfullscreen></iframe></p>
-        <audio controls>
-          <source src="http://www.stephaniequinn.com/Music/Commercial%20DEMO%20-%2015.mp3" type="audio/mpeg">
-        </audio>
-      </div>
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <!-- Latest compiled and minified JavaScript -->
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    </body>
+    <h1 id="media-title"> Race Advisor Media </h1>
+    <div class="video-container">
+      <p>
+        <iframe id="lead-video" width="560" height="315" src="https://www.youtube.com/embed/PY4ExLQyF4w" frameborder="0" allowfullscreen></iframe>
+      </p>
+      <p id="lead-title" class="caption"> Strava </p>
+      <p>
+        <iframe id="second-video" width="560" height="315" src="https://www.youtube.com/embed/S1jx9SNK44E" frameborder="0" allowfullscreen></iframe>
+      </p>
+      <p id="second-title" class="caption"> The Iron Cowboy</p>
+    </div>
+    <audio controls>
+      <source src="http://www.stephaniequinn.com/Music/Commercial%20DEMO%20-%2015.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
 
-    </html>
+</html>
