@@ -1,1 +1,1 @@
-Exercise consisted on work in terminal.
+Exercise consisted of work in terminal.
