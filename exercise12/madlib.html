@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Mad Libs </title>
+</head>
+
+<body>
+  <div id="madlib">
+    <p>One day a <span id="noun_1"></span> got into his boat and <span id="verb_2"></span> out to the <span id="adjective_3"></span>.</p>
+  </div>
+  <script>
+    // Mad Lib
+    var noun1 = prompt("Noun");
+    var verb2 = prompt("Verb");
+    var adjective3 = prompt("Adjective");
+
+    document.querySelector('#noun_1').textContent = noun1;
+    document.querySelector('#verb_2').textContent = verb2;
+    document.querySelector('#adjective_3').textContent = adjective3;
+  </script>
+</body>
+
+</html>

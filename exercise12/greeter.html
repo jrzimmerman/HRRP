@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Greeter </title>
+</head>
+
+<body>
+  <div id="greeting">
+  </div>
+  <p>It is so nice to have someone from <span id="home"></span>!</p>
+  <div id="source">
+    <p> I am a mighty source!</p>
+  </div>
+  <div id="destination">
+    <p> I am an average destination.</p>
+  </div>
+  <div id="swap_1">
+    <p> I am swap 1.</p>
+  </div>
+  <div id="swap_2">
+    <p> I am swap 2. </p>
+  </div>
+
+
+  <script>
+    // Name
+    var visitor_name = prompt("What's your name?");
+    var welcome_message = ("Welcome " + visitor_name + "!");
+    document.querySelector('#greeting').textContent = welcome_message;
+
+    // Home Town
+    var town = prompt("What's your home town?");
+    document.querySelector('#home').textContent = town;
+
+    // Shuffle
+    var source = document.querySelector('#source').textContent;
+    document.querySelector('#destination').textContent = source;
+
+    var swap1 = document.querySelector('#swap_1').textContent;
+    var swap2 = document.querySelector('#swap_2').textContent;
+
+    document.querySelector('#swap_1').textContent = swap2;
+    document.querySelector('#swap_2').textContent = swap1;
+  </script>
+</body>
+
+</html>

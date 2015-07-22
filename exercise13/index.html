@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Conditionals </title>
+</head>
+
+<body>
+  <div id="greeting">
+  </div>
+  <div id="welcome">
+  </div>
+  <div id="drinking">
+  </div>
+  <script>
+    // If they are not a member or if they are under the age of 21, address them as sir or ma'am as appropriate and apologetically deny them access to the club.
+    // Otherwise, greet them as Mr. or Mrs. (as appropriate by gender) and their name, and welcome them. If they are thirsty, prompt them as to what drink they would like.
+    // If their favorite drink is anything but "Coors Light", tell them "yes" (name) "one" (drink_name) "coming right up!". If they ask for a Coors, kick them out.
+    var name = "Justin";
+    var age = 25;
+    var gender = "male";
+    var is_member = true;
+    var thirsty = true;
+    var drink_of_choice = "Cherry Coke";
+
+    if (is_member === false || age < 21) {
+      if (gender === "male") {
+        document.querySelector('#greeting').textContent = ("Im sorry sir, but I cannot allow you in to the club.");
+      } else {
+        document.querySelector('#greeting').textContent = ("Im sorry ma'am, but I cannot allow you in to the club.");
+      }
+    } else {
+      if (gender === "male") {
+        document.querySelector('#greeting').textContent = ("Welcome, Mr. " + name + " to the club. ");
+      } else {
+        document.querySelector('#greeting').textContent = ("Welcome, Mrs. " + name + " to the club. ");
+      }
+      if (thirsty === true) {
+        var drink = prompt("What will you be drinking tonight?");
+        if (drink === "Coors Light") {
+          document.querySelector('#greeting').textContent = ("Get outta here!");
+        } else {
+          document.querySelector('#greeting').textContent = ("Yes " + name + ", one " + drink + " coming right up!");
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>
