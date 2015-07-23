@@ -2,22 +2,92 @@
 <html>
 
 <head>
+  <style>
+    .odd {
+      color: blue;
+    }
+
+    .even {
+      color: red;
+    }
+    .fizz {
+      color: purple;
+    }
+    .buzz {
+      color: orange;
+    }
+    .fizzbuzz {
+      color: green;
+    }
+  </style>
 </head>
 
 <body>
-  <style>
-    var n=100,
-    song='<ul class=lyrics>' while ( n >=0) {
-      if ( n !==0) {
-        song=song + '<li>' + n + " bottle" + (n===1 ? '': 's') + " of beer on the wall! chug, chug, chug</li>"
+  <div id="target">
+  </div>
+  <div id="cumulative">
+  </div>
+  <script>
+    // Exercise 1
+    var n = 10;
+    var count = 0;
+    var string = "";
+    while (count <= n) {
+      if (count % 2 == 0) {
+        string = string + "<p class=\"even\">" + count + "<p> <hr>";
+      } else {
+        string = string + "<p class=\"odd\">" + count + "<p> <hr>";
       }
-      else {
-        song+="<li>no bottles of beer! stumble, stumble, stumble...</li>"
-      }
-      n--
+      count++;
     }
-    song +="</ul>" document.querySelector('#lyrics').innerHTML=song
-  </style>
+    document.querySelector("#target").innerHTML = string;
+
+    // Exercise 2
+    var n2 = 1;
+    var sum = 1;
+    var str2 = "";
+    while (n2 <= 10) {
+      if (n2 % 2 == 0) {
+        sum *= n2;
+        str2 += "<p class=\"even\"> N = " + n2 + " Sum = " + sum + " </p>";
+      } else {
+        sum *= n2;
+        str2 += "<p class=\"odd\"> N = " + n2 + " Sum = " + sum + " </p>";
+      }
+      n2++;
+    }
+    document.querySelector("#cumulative").innerHTML = str2;
+
+    // Exercise 3
+    var n3 = 0;
+    while (n3 <= 20) {
+      if (n3 !== 13 && n3 % 2 === 0) {
+        console.log("I like the number " + n3 + ", a nice even number.");
+      } else if (n3 !== 13 && n3 % 2 !== 0) {
+        console.log("I like the number " + n3 + ", odd its okay too!");
+      } else {
+        console.log("la-la-la, nothing to say here");
+      }
+      n3++;
+    }
+
+    // Exercise 4 - FizzBuzz
+    var n = 0;
+    var str4 = "";
+    while (n <= 100) {
+      if ( n % 15 === 0) {
+        str += "<p class =\"FizzBuzz\"> FizzBuzz </p>\n");
+      }else if( n % 3 === 0 ) {
+        str += "<p class=\"Fizz\"> Fizz </p>\n";
+      } else if ( n % 5 === 0 ) {
+        str += "<p class=\"Buzz\"> Buzz </p>\n";
+      } else {
+        str += "<p> " + n + "</p>\n";
+      }
+      n++;
+    }
+
+  </script>
 </body>
 
 </html>
