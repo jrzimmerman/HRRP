@@ -1,0 +1,42 @@
+<html>
+
+<head>
+  <title>HTML Document</title>
+</head>
+
+<body>
+  <div id="everything">
+    <h1>A heading!</h1>
+    <p>Here's some text!</p>
+    <p>Here's a second set of text!</p>
+    <div class="holder">
+      <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+        <li>List Item 3</li>
+      </ul>
+    </div>
+    <div class="holder">
+      <ol>
+        <li>List Item 4</li>
+        <li>List Item 5</li>
+        <li>List Item 6</li>
+      </ol>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+  <script>
+    while (true) {
+      if(typeof color === "string"){
+        break;
+      }
+      var color = prompt("What color would you like?");
+    }
+    $('#everything').css('background-color', 'light'+color);
+    $('#everything').css('border','1px solid ' + color);
+    $('#everything').css('color', color)
+    $('h1').html('Color changed to ' + color);
+  </script>
+</body>
+
+</html>
