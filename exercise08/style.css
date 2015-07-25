@@ -1,20 +1,19 @@
+* {
+  box-sizing: border-box;
+}
 #container {
   max-width: 960px;
-  margin: 0 auto;
+  margin: 0;
   background-color: gray;
-  margin-top: 140px;
   overflow: auto;
 }
 #header {
   background-color: orange;
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 40px;
   width: 100%;
 }
-#brand {
-  background-color: cyan;
+#content img {
+  float: right;
+  margin: 0 0 1em 1em;
 }
 #nav {
   background-color: green;
@@ -26,17 +25,12 @@
 #content {
   background-color: blue;
   width: 75%;
+  padding: 10px;
   float:left;
-}
-#content img {
-  float: right;
-  margin: 0 0 1em 1em;
 }
 #sidebar {
   background-color: aqua;
   width: 25%;
+  padding: 10px;
   float:left;
-}
-* {
-  box-sizing: border-box;
 }
