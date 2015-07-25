@@ -1,3 +1,10 @@
+.content {
+  width: 960px;
+  margin: 0 auto;
+}
+h1 {
+  text-align: center;
+}
 div {
   border: 1px solid red;
   padding: 10px;
@@ -7,4 +14,13 @@ span {
   border: 1px solid green;
   padding: 2px;
   margin: 2px;
+}
+#head {
+  border-radius: 10px;
+}
+#description {
+  margin-top: 20px;
+}
+p {
+  padding-right: 20px;
 }
