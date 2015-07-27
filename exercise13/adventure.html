@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Choose Your Own Adventure</title>
+</head>
+
+<body>
+  <div id="greeting">
+  </div>
+  <div id="study">
+  </div>
+  <div id="workout">
+  </div>
+  <div id="conclusion">
+  </div>
+  <script>
+  // Prompt the user for their name
+  // Have we studied today? Have we worked out today?
+  // If we studied  and not worked out, we will work out.
+  // If we didn't study we will study.
+  // If we have studied and worked out, its time to eat!
+
+  var name = prompt("What\'s your name?");
+  document.querySelector('#greeting').text = "Hello, " + name + ".";
+  var study = prompt("Have you studied yet today?");
+  if (study.toUpperCase() === "YES") {
+      document.querySelector('#study').text = "Great job studying!");
+      var workout = prompt("Have you worked out?");
+      if (workout.toUpperCase() === "YES") {
+        document.querySelector('#conclusion').text = "Great job, time to eat!";
+      } else {
+        document.querySelector('#workout').text = "Time to workout!";
+      }
+  } else {
+    document.querySelector('#conclusion').text = "Time to start studying!";
+  }
+
+  </script>
+</body>
+
+</html>

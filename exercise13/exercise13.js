@@ -146,3 +146,15 @@ if (age < 21) {
 } else {
   output_el.textContent = "come on in!";
 }
+
+////////////////////////////////
+
+if (age < 21) {
+  output_el.textContent = "sorry, son";
+} else if (name === "Bob") {
+  output_el.textContent = "you're banned bob!";
+} else if (age <= 35 ) {
+  output_el.textContent = "id please";
+}  else {
+  output_el.textContent = "come on in!";
+}
