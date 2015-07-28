@@ -4,5 +4,3 @@ while ( n <= 50 ) {
   console.log(n);
   n += 2;
 }
-
-// Exercise 2
