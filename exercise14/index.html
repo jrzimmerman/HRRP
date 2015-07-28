@@ -10,12 +10,15 @@
     .even {
       color: red;
     }
+
     .fizz {
       color: purple;
     }
+
     .buzz {
       color: orange;
     }
+
     .fizzbuzz {
       color: green;
     }
@@ -23,11 +26,28 @@
 </head>
 
 <body>
+  <div id="lyrics">
+  </div>
   <div id="target">
   </div>
   <div id="cumulative">
   </div>
   <script>
+    var n = 100,
+      song = '<ul class=lyrics>'
+
+    while (n >= 0) {
+      if (n !== 0) {
+        song = song + '<li>' + n + " bottle" + (n === 1 ? '' : 's') + " of beer on the wall! chug, chug, chug</li>"
+      } else {
+        song += "<li>no bottles of beer! stumble, stumble, stumble...</li>"
+      }
+      n--
+    }
+    song += "</ul>"
+
+    document.querySelector('#lyrics').innerHTML = song
+
     // Exercise 1
     var n = 10;
     var count = 0;
@@ -72,21 +92,20 @@
     }
 
     // Exercise 4 - FizzBuzz
-    var n = 0;
+    var n4 = 0;
     var str4 = "";
-    while (n <= 100) {
-      if ( n % 15 === 0) {
-        str += "<p class =\"FizzBuzz\"> FizzBuzz </p>\n");
-      }else if( n % 3 === 0 ) {
-        str += "<p class=\"Fizz\"> Fizz </p>\n";
-      } else if ( n % 5 === 0 ) {
-        str += "<p class=\"Buzz\"> Buzz </p>\n";
+    while (n4 <= 100) {
+      if (n4 % 15 === 0) {
+        str4 += "<p class =\"FizzBuzz\"> FizzBuzz </p>\n";
+      } else if (n4 % 3 === 0) {
+        str4 += "<p class=\"Fizz\"> Fizz </p>\n";
+      } else if (n4 % 5 === 0) {
+        str4 += "<p class=\"Buzz\"> Buzz </p>\n";
       } else {
-        str += "<p> " + n + "</p>\n";
+        str4 += "<p> " + n4 + "</p>\n";
       }
       n++;
     }
-
   </script>
 </body>
 
