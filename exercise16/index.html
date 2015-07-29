@@ -4,9 +4,73 @@
   <title> Exercise 16 </title>
 </head>
 <body>
-  <div id="content">
+  <div id="output">
   </div>
+  <div id="sentence">
+  </div>
+  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
   <script>
+
+//////////////////// Exercise 1 - print the time
+  var printTime = function() {
+    var d = new Date();
+    var hours = d.getHours();
+    var mins = d.getMinutes();
+    var seconds = d.getSeconds();
+    var str = "";
+
+    if(hours > 12) {
+      hours -= 12;
+    }
+
+    str += "Hello, it's currently " + hours + ":" + mins + ":" + seconds + "! ";
+    $('#output').append(str);
+  }
+
+  printTime();
+  printTime();
+  printTime();
+
+///////////////// Exercise 2 - Get Sentence
+  var get_sentence = function () {
+    var sentArr = [];
+    for(var i = 0; i < arguments.length; i++) {
+      sentArr.push(arguments[i]);
+    }
+    return sentArr[Math.floor(Math.random() * sentArr.length)];
+  }
+  var sentI = 0;
+  while ( sentI < 10) {
+  $('#sentence').append("<p>" + get_sentence("hi","hello","hey") + "</p>");
+  sentI++;
+}
+
+//////////////// Exercise 3 - Log and Return
+  var log_and_return = function () {
+    console.log(arguments);
+    return arguments;
+  }
+  var returned_values = log_and_return("hi","hello","hey");
+  log_and_return(returned_values);
+
+////////////////// Exercise 4 - Simple Math
+
+var tripler = function (num) {
+  return num * 3;
+}
+
+var multiply = function (one, two) {
+  return one * two;
+}
+
+var divide = function (one, two) {
+  return one / two;
+}
+
+var remainder = function (one, two) {
+  return one % two;
+}
+var triple5 = tripler(5);
 
   </script>
 </body>
