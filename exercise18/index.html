@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Arrays</title>
+</head>
+
+<body>
+  <div id="bucket_output">
+  </div>
+  <div id="recipe_output">
+  </div>
+  <div id="second_bucket_output">
+  </div>
+  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+  <script>
+    /// Exercise 0
+    var word = "Hello";
+    word[0];
+    word[1];
+    word[2];
+    word[4];
+    word[5];
+    var index = 3;
+    word[index];
+    var len = word.length;
+    word[len];
+    word[len - 1];
+
+    ///// Exercise 1
+    var recipe = [];
+    recipe[0] = "thaw steak";
+    recipe[1] = "marinate steak";
+    recipe[2] = "cook steak";
+    recipe[3] = "eat steak";
+    var last_step = recipe[3];
+    console.log(last_step);
+
+    ////// Exercise 2
+    var words = ['stuff', 'more stuff', 'even more stuff'];
+    words.length;
+    words.push("More on the end!!!");
+    var lastItem = words.pop();
+    console.log(lastItem);
+    words.unshift("More at the beginning!!");
+    var firstItem = words.shift();
+    console.log(firstItem);
+
+    /////// Exercise 3
+    var bucket_list = [];
+    bucket_list[0] = "Be happy";
+    bucket_list[1] = "Get into Hack Reactor";
+    bucket_list.push("Get an awesome job");
+    bucket_list.push("Change the world");
+    console.log(bucket_list);
+    bucket_list.unshift(bucket_list[3]);
+    console.log(bucket_list);
+    bucket_list.unshift(bucket_list[1]);
+    console.log(bucket_list);
+    console.log(bucket_list.length);
+    var dying_wish = bucket_list.pop();
+    var do_it_now = bucket_list.shift();
+    console.log(bucket_list.length);
+
+    //////////// Exercise 4
+    var append_strings = function(arr, div) {
+      var i4 = 0
+      while (i4 < arr.length) {
+        $("#" + div).append("<p>" + bucket_list[i4] + "</p>");
+        i4++;
+      }
+    }
+    append_strings(bucket_list, "bucket_output");
+    append_strings(recipe, "recipe_output");
+
+    //////////// Exercise 5
+    var str = "one two three";
+    var arr = str.split(' ');
+    var new_str = arr.join(' and a ');
+    var scrambled_poem = "roses red are bacon crispy i bacon love and is blue violets are";
+    var scrambled_array = scrambled_poem.split(' ');
+    var unscrambled_array = [];
+    while (scrambled_array.length > 0) {
+      unscrambled_array.push(scrambled_array.shift());
+      unscrambled_array.push(scrambled_array.pop());
+    }
+    var unscrambled_poem = unscrambled_array.join(' ');
+    console.log(unscrambled_poem);
+
+    ///////////// Exercise 6
+    var reverser = function (arr) {
+      var reverse_array = [];
+      for (var i = 1; i <= arr.length; i++) {
+        reverse_array.push(arr[arr.length - i]);
+      }
+      return reverse_array;
+    }
+    reverser(unscrambled_array);
+
+    ////////////// Exercise 7
+    var words = ['stuff', 'more stuff', 'even more stuff'];
+    var append_strings = function(item) {
+      $("#second_bucket_output").append("<p>" + bucket_list[item] + "</p>")
+    }
+    words.forEach(append_strings);
+  </script>
+</body>
+
+</html>
