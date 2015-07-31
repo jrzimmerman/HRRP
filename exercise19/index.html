@@ -9,6 +9,8 @@
   <div id="target">
     <p> text </p>
   </div>
+  <div id="primative_data_types">
+  </div>
   <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
   <script>
     var obj = {
@@ -20,12 +22,38 @@
 
     var target_key = "greeting";
     for (var key in obj) {
-      if(key === "color") {
+      if (key === "color") {
         $("#target").css("background-color", obj[key]);
-      }else if (obj[key] === "down") {
+      } else if (obj[key] === "down") {
         $("#target").append("<p>" + key + "</p>");
       } else if (obj[key] == obj[target_key]) {
         $("#target").append("<p>" + obj[target_key] + "</p>");
+      }
+    }
+
+    ///////////////////////////
+    var complex_object = {
+      string: "I'm a string!",
+      number: 42,
+      array: ["all sorts of stuff", 10, true, undefined, {
+        me: "an object",
+        more: "find me in here!"
+      }, function() {
+        console.log('beepity-beep')
+      }],
+      simple_object: {
+        name: 'bob',
+        location: 'basement'
+      },
+      fn: function() {
+        console.log("fn has been invoked! Checking both kinds of invocation-time inputs...")
+        console.log("what is my calling context?", this)
+        console.log("what are my arguments?", arguments)
+      }
+    };
+    for (var key in complex_object) {
+      if (typeof complex_object[key] === "string" || typeof complex_object[key] === "number") {
+        $("#primitive_data_types").append("<p>" + complex_object[key] + "</p>");
       }
     }
   </script>

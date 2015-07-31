@@ -114,3 +114,16 @@ for (var key in politicos) {
     b_named_politicos[key] = politicos[key].join(' ');
   }
 }
+var reverse_politico_lookup = {};
+for (var key in politicos) {
+  reverse_politico_lookup[politicos[key]] = key;
+}
+
+//////////////// Exercise 10
+var type_tester = function(input) {
+  if (Array.isArray(input)) {
+    return "array";
+  } else {
+    return typeof input;
+  }
+};
