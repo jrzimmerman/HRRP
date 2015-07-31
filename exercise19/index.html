@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Exercise 19</title>
+</head>
+
+<body>
+  <div id="target">
+    <p> text </p>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+  <script>
+    var obj = {
+      greeting: 'howdy',
+      direction: 'down',
+      color: 'red',
+      'spaces-and-dashes can be used': ' but need to have quotes'
+    }
+
+    var target_key = "greeting";
+    for (var key in obj) {
+      if(key === "color") {
+        $("#target").css("background-color", obj[key]);
+      }else if (obj[key] === "down") {
+        $("#target").append("<p>" + key + "</p>");
+      } else if (obj[key] == obj[target_key]) {
+        $("#target").append("<p>" + obj[target_key] + "</p>");
+      }
+    }
+  </script>
+</body>
+
+</html>
