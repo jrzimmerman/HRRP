@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Exercise 21</title>
+</head>
+
+<body>
+  <div class="container">
+    <div id="current_temp">
+    </div>
+    <div id="high_low">
+    </div>
+    <div id="desc">
+    </div>
+    <div id="wind_speed">
+    </div>
+    <div id="sunrise_sunset">
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script>
+    var to_be_run_on_server_response = function(weather_data) {
+      $('#current_temp').append("The current temperature is: " + weather_data.main.temp);
+      $('#high_low').append("The high today is: " + weather_data.main.temp_min + " and the low today is " + weather_data.main.temp_max);
+      $("#desc").append("Description: " + weather_data.weather[0].description);
+      $("#wind_speed").append("The current wind speed is: " + weather_data.wind.speed);
+      var sunrise = new Date(weather_data.sys.sunrise * 1000);
+      var sunset = new Date(weather_data.sys.sunset * 1000);
+      $("#sunrise_sunset").append("Sunrise is: " + sunrise + "Sunset is: " + sunset);
+    }
+    $.get('http://api.openweathermap.org/data/2.5/weather?q=Somerset,PA&mode=json&units=imperial').success(to_be_run_on_server_response);
+  </script>
+</body>
+
+</html>
