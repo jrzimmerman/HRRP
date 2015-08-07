@@ -96,3 +96,50 @@ var reverse_adder = function(car) {
 
 reverse_adder(car1);
 reverse_adder(car2);
+
+var fetch_adder = function(dog) {
+  dog.fetch = function() {
+    this.fetch = this.name + " just went to fetch more ice cream, see ya later.";
+  };
+};
+
+var nap_adder = function(cat) {
+  cat.nap = function() {
+    this.nap = this.name + " is pretty tired, time for a nap!";
+  };
+};
+
+//////////////// Factory Patterns
+
+var car_factory = function(type, speed) {
+  var car = {};
+
+  car.position = 0;
+  car.type = type;
+  car.speed = speed;
+
+  car.move = function() {
+    this.position += this.speed;
+  };
+
+  return car;
+};
+
+var new_toyota = car_factory('Toyota Hilux', 3);
+var new_honda = car_factory('Honda Accord', 5);
+
+var warrior_factory = function(name, weapon) {
+  var warrior = {};
+
+  warrior.name = name;
+  warrior.weapon = weapon;
+
+  warrior.attack = function() {
+    console.log(this.name + " is attacking with " + this.weapon);
+  };
+  warrior.adventure = function() {
+    this.attack();
+    this.attack();
+    this.attack();
+  };
+};
