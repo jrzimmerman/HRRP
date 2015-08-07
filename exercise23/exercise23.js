@@ -29,8 +29,9 @@ person.float_through_life_on_autopilot = function() {
 };
 var move_fn = function() {
   var prev = this.position;
-  if(this.speed > 50) {
-  this.position = this.position + 1;}
+  if (this.speed > 50) {
+    this.position = this.position + 1;
+  }
   console.log(this.type + " is moving from position " + prev + " to " + this.position + " at " + this.speed + " miles per hour.");
 };
 
@@ -73,7 +74,7 @@ var dog2 = {
   go_to_park: go_to_park_fn
 };
 
-var meow_fn = function(){
+var meow_fn = function() {
   console.log(this.name + " meowed");
 };
 
@@ -85,3 +86,13 @@ var cat2 = {
   name: "snowball",
   meow: meow_fn
 };
+
+///////////// Decorator Patterns
+var reverse_adder = function(car) {
+  car.reverse = function() {
+    this.position = this.position - this.speed;
+  };
+};
+
+reverse_adder(car1);
+reverse_adder(car2);
