@@ -142,4 +142,6 @@ var warrior_factory = function(name, weapon) {
     this.attack();
     this.attack();
   };
+
+  return warrior;
 };
